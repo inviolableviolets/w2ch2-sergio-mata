@@ -1,15 +1,14 @@
-import { striqtEquals } from "./utils";
+import { striqtEquals } from "../index.js";
 
 describe("Given a striqtEquals function", () => {
   describe("When it receives 1 and 1", () => {
     test("Then it should return true", () => {
-      //Arrange
       const firstValue = 1;
       const secondValue = 1;
       const expectedResult = true;
-      //Act
-      const booleanResult = Object.is(firstValue, secondValue);
-      //Assert
+
+      const booleanResult = striqtEquals(firstValue, secondValue);
+
       expect(booleanResult).toBe(expectedResult);
     });
   });
